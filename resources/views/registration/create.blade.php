@@ -1,0 +1,36 @@
+@extends('layout.app')
+
+@section('title', 'Registration page')
+
+@section('content')
+
+    <div style="height:100%;width:100%;display: flex;justify-content: center;align-items: center">
+        <div style="padding:40px;width:400px;height: 600px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+            <h2>Register</h2>
+            <form method="POST" action="/register">
+                {{ csrf_field() }}
+                <div class="form-group" style="margin:10px;">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+
+                <div class="form-group" style="margin:10px;">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+
+                <div class="form-group" style="margin:10px;">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+
+                <div class="form-group" style="margin:10px;">
+                    <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+@endsection
+
+
